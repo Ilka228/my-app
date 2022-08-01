@@ -23,6 +23,6 @@ To preview press the ***image*** button
 
 To **change** previewed **image** press on the other one in the **queue**
 
-### Bugs
+### Possible improvements
 + It's impossible to upload one image two times one after another
 + It's better not to upload one image more then one time 
