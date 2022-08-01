@@ -42,8 +42,7 @@ class App extends React.Component<AppProps, AppState> {
   }
         
   render(): React.ReactNode {
-     
-    
+        
     return (
       <div className="App">
         <div className='storage-area'>
