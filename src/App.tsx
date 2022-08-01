@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
 
-
 type AppProps = {
 };
+
 type AppFile = {
   url: string;
   name: string;
-  
 }
+
 type AppState = {
   filesList: Array<AppFile>;
   currentImgSrc: string;
@@ -45,26 +45,22 @@ class App extends React.Component<AppProps, AppState> {
         
     return (
       <div className="App">
-        <div className='storage-area'>
+        <div className='list'>
           {this.state.filesList.map((item, index) => 
-            <div key={index} className="img-item">
-              <button onClick={() => this.setState({currentImgSrc: item.url})}>{getFileNameFromUrl(item.name)}</button>
+            <div key={index} className="list__item">
+              <button className='list__button' onClick={() => this.setState({currentImgSrc: item.url})}>{getFileNameFromUrl(item.name)}</button>
             </div>
           )}
-          <form encType="multipart/form-data" className='img-item loader-form'>
-            
-            <label htmlFor="actual-btn" className='loader'>+ Upload Your Image</label>
-            <input type="file" id="actual-btn" accept="image/*,image/jpeg"  className='input' onChange={this.onChange}/>
-          
+          <form encType="multipart/form-data" className='list__item form'>
+            <label htmlFor="actual-btn" className='form__label'>+ Upload Your Image</label>
+            <input type="file" id="actual-btn" accept="image/*,image/jpeg"  className='form__input' onChange={this.onChange}/>
           </form>
         </div>
         <div className='preview'>
-          {this.state.currentImgSrc === '' ? null : <img src={this.state.currentImgSrc}/>}
+          {this.state.currentImgSrc === '' ? null : <img className='preview__image' src={this.state.currentImgSrc}/>}
         </div>
       </div>
-      )}
+      )};
 }
-
-
 
 export default App;
