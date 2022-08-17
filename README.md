@@ -4,7 +4,7 @@ React and Typescrpt project made to preview local images
 
 ## Tool usage
 
-To open the tool follow this [link](https://ilka228.github.io/my-app/)
+To open the tool follow this [link](https://ilya-solo.github.io/my-app/)
 
 ### Upload the image
 
